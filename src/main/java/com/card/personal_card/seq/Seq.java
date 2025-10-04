@@ -10,14 +10,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name='card_usage')
+@Table(name="card_usage")
 public class Seq {
     //primary key of our entity is the one with\@ id which is the sequence in this case
     //this is unique identifier for all records in table (or database??)
     @Id
     //tells spring boot where to find in our postgres DB
     //said unique true bc don't want duplicate seq numbered records
-    @Column(name = 'sequence', unique = true)
+    @Column(name = "sequence", unique = true)
     private Integer sequence;
     private String service_provider_name;
     private String location;
